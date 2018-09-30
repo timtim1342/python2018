@@ -77,10 +77,8 @@ def main():
     namer = ''
     namef = ''
     for usname in usls:
-        rdat = getjson('https://api.github.com/users/%s/repos?access_token=2baaa5c4d64d41f5b51c59c4bb9881bc67ea1f84'
-                       % usname)
-        fdat = getjson('https://api.github.com/users/%s/followers?access_token=2baaa5c4d64d41f5b51c59c4bb9881bc67ea1f84'
-                       % usname)
+        rdat = getjson('https://api.github.com/users/%s/repos' % usname)
+        fdat = getjson('https://api.github.com/users/%s/followers' % usname)
         f = follow(fdat)
         desc = repdescr(rdat)
         lng = lang(rdat)
