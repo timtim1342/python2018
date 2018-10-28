@@ -111,13 +111,13 @@ def csv_mystem_txt(start_path):
                     os.chdir(year)
                 if not os.path.exists(month):
                     os.mkdir(month)
-                    os.chdir(month)
-                    os.system('C:\\Users\\Tim\\mystem.exe ' + '-cdi --eng-gr ' + # (-i)все равно не снимает омонимию
+                    os.chdir(month) # mystem должен лежать сразу на C
+                    os.system('C:\\mystem.exe ' + '-cdi --eng-gr ' + # (-i)все равно не снимает омонимию
                               os.getcwd().replace('mystem-plain', 'plain') + '\\' + name + '.txt '  + os.getcwd() +
                               '\\' + name + '.txt')
                 else: # Не понятно, что подразумевается под "начальной формой". Исходные словофрмы(-l) или сами леммы(?)
                     os.chdir(month)
-                    os.system('C:\\Users\\Tim\\mystem.exe ' + '-cdi --eng-gr ' +
+                    os.system('C:\\mystem.exe ' + '-cdi --eng-gr ' +
                               os.getcwd().replace('mystem-plain', 'plain') + '\\' + name + '.txt '  + os.getcwd() +
                               '\\' + name + '.txt')
                 os.chdir(start_path + r'\vechorka\mystem-xml')
@@ -129,12 +129,12 @@ def csv_mystem_txt(start_path):
                 if not os.path.exists(month):
                     os.mkdir(month)
                     os.chdir(month)
-                    os.system('C:\\Users\\Tim\\mystem.exe ' + '-cdi --eng-gr --format xml ' +
+                    os.system('C:\\mystem.exe ' + '-cdi --eng-gr --format xml ' +
                               os.getcwd().replace('mystem-xml', 'plain') + '\\' + name + '.txt '  + os.getcwd() +
                               '\\' + name + '.xml')
                 else:
                     os.chdir(month)
-                    os.system('C:\\Users\\Tim\\mystem.exe ' + '-cdi --eng-gr --format xml ' +
+                    os.system('C:\\mystem.exe ' + '-cdi --eng-gr --format xml ' +
                               os.getcwd().replace('mystem-xml', 'plain') + '\\' + name + '.txt '  + os.getcwd() +
                               '\\' + name + '.xml')
                 os.chdir(start_path)
