@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ты кто такой?</title>
+</head>
+<body>
+<h1>Расскажите немного о себе</h1>
+<form>
+    <p><b>Как вас зовут?</b> <input required type="text" name="username"></p>
+    <p><b>Сколько вам лет?</b> <input required type="text" name="age"></p>
+    <p><b>Ваш пол</b>
+    <input required type="radio" name="gender" value="M">М
+    <input required type="radio" name="gender" value="F">Ж<br>
+    </p>
+    {% for i in q %}
+	<div>
+	<h1>{{i}}</h1>
+    <input required type="radio" name="{{i}}" value="first">{{q[i][0]}}<br>
+    <input required type="radio" name="{{i}}" value="second">{{q[i][1]}}<br>
+    <input required type="radio" name="{{i}}" value="third">{{q[i][2]}}<br>
+	</div>
+    {% endfor %}
+    <p><input type="submit"></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Малость цифр</title>
+</head>
+<body>
+<table>
+    <tr>
+       <th>Имя</th><th>Пол</th><th>Возраст</th>
+        {% for i in z %}
+        <th>{{a[i]}}</th>
+        {% endfor %}
+		<th>Правильных ответов</th>
+    </tr>
+    {% for i in l %}
+    <tr>
+        {% for j in q%}
+        <td>{{t[i][j]}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+<form>
+    <input type="button" value="На главную" onClick='location.href="/"'>
+    <input type="button" value="Результаты в json" onClick='location.href="/json"'>
+    <input type="button" value="Поиск" onClick='location.href="/search"'>
+</form>
+</body>
+</html>
