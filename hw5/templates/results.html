@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GALAXY</title>
+	<style type="text/css">
+   .mainblock { 
+    width: 400px; 
+	margin: auto;
+	text-align: center;
+   }
+   .blocks{
+   background: #fc0;
+   padding: 20px;
+   margin: 10px 0px;
+   }
+   input[type="text"] {
+   width:400px;
+   }
+  </style>
+</head>
+<body>
+<div class="mainblock">
+<form>
+<p><input required type="text" name="word"></p>
+<input type="submit" value="Поиск">
+</form>
+{% for i in z %}
+<div class="blocks">
+<p><a href={{url[i]}} target="_blank">{{cont[i]}}</a></p>
+</div>
+{% endfor %}
+</div>
+</body>
+</html>
