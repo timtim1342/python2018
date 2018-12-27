@@ -15,7 +15,7 @@ def mkdb():
         date = txtlst[i][3]
         author = txtlst[i][1]
         url = txtlst[i][10]
-        path = str(txtlst[i][0]).replace('paperproject', 'ya')
+        path = str(txtlst[i][0]).replace('paperproject', 'ya') #тут имя папки проекта, у меня это ya
         with open(path, 'r', encoding='utf-8') as f:
             text = f.read()
             text = (re.sub('@.+','', text)).replace('\t', '').replace('\n', '')
