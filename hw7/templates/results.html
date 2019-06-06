@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Graphs</title>
+    <style>
+        .mainblock {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            margin-top: 10px;
+            transform: translate(-50%, -50%);
+        }
+        .mainblock p{
+			text-align: center;
+		}
+        table {
+            width: 300px;
+            border: 1px solid green;
+            margin: auto;
+        }
+        td {
+            text-align: center;
+        }
+        .but {
+			color: #000000;
+			text-decoration: none;
+			user-select: none;
+			background: #7e1b09;
+			border: 0;
+			padding: 5px;
+            width: 100px;
+			height: 40px;
+            border-radius: 3px;
+		}
+		.but:hover { background: #A52A2A; }
+		.but:active { background: #B22222; }
+    </style>
+</head>
+<body>
+<div class="mainblock">
+    <p>Радиус: {{r}}</p>
+    <p>Диаметр: {{d}}</p>
+    <p>Плотность: {{p}}</p>
+    <p>Коэффициент ассортативности: {{ka}}</p>
+    <p>Коэффициент кластеризации: {{kc}}</p>
+    <p>Количество узлов: {{nn}}</p>
+    <p> Количество ребер: {{ne}}</p>
+    <div class="centrality">
+        <table>
+            <tr>
+                <th>degree_centrality</th><th>closeness_centrality</th><th>betweenness_centrality</th><th>eigenvector_centrality</th>
+            </tr>
+            {% for i in l %}
+            <tr>
+                <td>{{dc[i]}}</td>
+                <td>{{cc[i]}}</td>
+                <td>{{bc[i]}}</td>
+                <td>{{ec[i]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <p>А теперь сообщества</p>
+    {% for j in k %}
+    <p>{{j}}</p>
+    {% endfor %}
+    <p class="fig"><img src="{{ url_for('static', filename=filename) }}" alt="graph"></p>
+    <p><input class="but" type="button" value="На главную" onClick='location.href="/"'></p>
+</div>
+</body>

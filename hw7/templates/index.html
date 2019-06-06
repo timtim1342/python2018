@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Search</title>
+	<style type="text/css">
+		.mainblock {
+			margin: 0;
+        	position: absolute;
+        	top: 50%;
+        	left: 50%;
+        	margin-right: -50%;
+        	transform: translate(-50%, -50%)
+		}
+		.mainblock form{
+			text-align: center;
+		}
+		.mainblock p{
+			text-align: center;
+		}
+		input[type="text"] {
+			width: 400px;
+			height: 40px;
+		}
+		.but {
+			color: #000000;
+			text-decoration: none;
+			user-select: none;
+			background: #7e1b09;
+			border: 0;
+			padding: 5px;
+			width: 100px;
+			height: 40px;
+			border-radius: 3px;
+		}
+		.but:hover { background: #A52A2A; }
+		.but:active { background: #B22222; }
+	</style>
+	</head>
+	<body>
+		<div class="mainblock">
+			<p>
+				<a href=
+				"https://github.com/akutuzov/universal-pos-tags/blob/4653e8a9154e93fe2f417c7fdb7a357b7d6ce333/ru-rnc.map"
+				   target="_blank">Больше про разметку
+				</a>
+			</p>
+			<form>
+				<p><input required type="text" name="word" title='После слова через "_" укажите частереченый тэг слова, которого ищите' placeholder="подсказка_S"></p>
+				<p><input class = "but" type="submit" value="Поиск"></p>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ooops</title>
+    <style type="text/css">
+		.mainblock {
+			margin: 0;
+        	position: absolute;
+        	top: 50%;
+        	left: 50%;
+        	margin-right: -50%;
+        	transform: translate(-50%, -50%)
+		}
+		.mainblock form{
+			text-align: center;
+		}
+		.mainblock p{
+			text-align: center;
+		}
+		.but {
+			color: #000000;
+			text-decoration: none;
+			user-select: none;
+			background: #7e1b09;
+			border: 0;
+			padding: 5px;
+			width: 100px;
+			height: 40px;
+			border-radius: 3px;
+		}
+		.but:hover { background: #A52A2A; }
+		.but:active { background: #B22222; }
+	</style>
+</head>
+<body>
+<div class="mainblock">
+    <p>
+        Увы, этого слова нет в корпусе или Вы написали его не в том формате или с ошибкой.
+        <a href="https://rusvectores.org/ru/models/" target="_blank">Тут еще немного про то, как правильно искать.</a>
+    </p>
+    <p><input class="but" type="button" value="На главную" onClick='location.href="/"'></p>
+</div>
+
+</body>
+</html>
