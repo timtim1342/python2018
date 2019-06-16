@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Just do it</title>
+    <style type="text/css">
+		.mainblock {
+			margin: 0;
+        	position: absolute;
+        	top: 50%;
+        	left: 50%;
+        	margin-right: -50%;
+        	transform: translate(-50%, -50%)
+		}
+		.mainblock p{
+			text-align: left;
+		}
+        .mainblock h1{
+            text-align: center;
+        }
+        #sub {
+            text-align: center;
+        }
+        #s {
+            text-align: center;
+        }
+		.name {
+			width: 400px;
+			height: 40px;
+		}
+        .age {
+			width: 60px;
+			height: 40px;
+		}
+		.but {
+			color: #000000;
+			text-decoration: none;
+			user-select: none;
+			background: #7e1b09;
+			border: 0;
+			padding: 5px;
+			width: 100px;
+			height: 40px;
+			border-radius: 3px;
+		}
+		.but:hover { background: #A52A2A; }
+		.but:active { background: #B22222; }
+	</style>
+</head>
+<body>
+<div class="mainblock">
+    <p id="s"><input class = "but" type="button" value="Поиск" onClick='location.href="/search"'>
+        <input class = "but" type="button" value="Статистика" onClick='location.href="/stats"'>
+    </p>
+    <h1>Загрузка данных</h1>
+    <form enctype="multipart/form-data" method="post">
+        <p><b>Имя/индекс автора текста</b> <input class="name" required type="text" name="speakername"></p>
+        <p><b>Возраст</b> <input class="age" required type="text" name="age"></p>
+        <p><b>Пол</b>
+            <input required type="radio" name="gender" value="M">М
+            <input required type="radio" name="gender" value="F">Ж<br>
+        </p>
+        <p><input type="file" name="file"></p>
+        <p><b>Ваше имя</b> <input class="name" required type="text" name="username"></p>
+        <p id="sub"><input class="but" type="submit"></p>
+    </form>
+</div>
+
+</body>
+</html>

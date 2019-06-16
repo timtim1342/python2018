@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thanks</title>
+    <style type="text/css">
+		.mainblock {
+			margin: 0;
+        	position: absolute;
+        	top: 50%;
+        	left: 50%;
+        	margin-right: -50%;
+        	transform: translate(-50%, -50%)
+		}
+		.mainblock form{
+			text-align: center;
+		}
+		.mainblock p{
+			text-align: center;
+		}
+        .mainblock h1{
+            text-align: center;
+        }
+		.name {
+			width: 400px;
+			height: 40px;
+		}
+        .age {
+			width: 60px;
+			height: 40px;
+		}
+		.but {
+			color: #000000;
+			text-decoration: none;
+			user-select: none;
+			background: #7e1b09;
+			border: 0;
+			padding: 5px;
+			width: 100px;
+			height: 40px;
+			border-radius: 3px;
+		}
+		.but:hover { background: #A52A2A; }
+		.but:active { background: #B22222; }
+	</style>
+</head>
+<body>
+<div class="mainblock">
+    <h1>Спасибо, Ваши данные загружены</h1>
+    <p><input class = "but" type="button" value="Статистика" onClick='location.href="/stats"'>
+        <input class = "but" type="button" value="Загрузить" onClick='location.href="/"'>
+        <input class = "but" type="button" value="Поиск" onClick='location.href="/search"'>
+    </p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stats</title>
+    <style type="text/css">
+		.mainblock {
+			margin: 0;
+        	position: absolute;
+        	top: 50%;
+        	left: 50%;
+        	margin-right: -50%;
+        	transform: translate(-50%, -50%);
+            text-align: center;
+		}
+		.search {
+			width: 400px;
+			height: 40px;
+		}
+		.but {
+			color: #000000;
+			text-decoration: none;
+			user-select: none;
+			background: #7e1b09;
+			border: 0;
+			padding: 5px;
+			width: 100px;
+			height: 40px;
+			border-radius: 3px;
+		}
+		.but:hover { background: #A52A2A; }
+		.but:active { background: #B22222; }
+        td {
+            text-align: left;
+        }
+	</style>
+</head>
+<body>
+<div class="mainblock">
+    <h1>Немного статистики по нашей БД</h1>
+    <table>
+        <tr>
+            <th></th><th>Средний возраст</th><th>Количество</th>
+        </tr>
+        <tr>
+            <td><b>Женщины</b></td><td>{{fmale_age}}</td><td>{{fmale}}</td>
+        </tr>
+        <tr>
+            <td><b>Мужчины</b></td><td>{{male_age}}</td><td>{{male}}</td>
+        </tr>
+        <tr>
+            <td><b>Всего слов</b></td><td>{{c}}</td>
+        </tr>
+    </table>
+    <p><input class = "but" type="button" value="Поиск" onClick='location.href="/search"'>
+        <input class="but" type="button" value="Загрузить" onClick='location.href="/"'>
+    </p>
+</div>
+</body>
+</html>

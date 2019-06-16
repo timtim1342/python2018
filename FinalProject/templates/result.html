@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <style type="text/css">
+		.mainblock {
+			margin: 0;
+        	position: absolute;
+        	top: 50%;
+        	left: 50%;
+        	margin-right: -50%;
+        	transform: translate(-50%, -50%);
+            text-align: center;
+		}
+		.but {
+			color: #000000;
+			text-decoration: none;
+			user-select: none;
+			background: #7e1b09;
+			border: 0;
+			padding: 5px;
+			width: 100px;
+			height: 40px;
+			border-radius: 3px;
+		}
+		.but:hover { background: #A52A2A; }
+		.but:active { background: #B22222; }
+        td {
+            text-align: left;
+        }
+	</style>
+</head>
+<body>
+<div class="mainblock">
+    <div class="centrality">
+        <table>
+            <tr>
+                <th>Транскрипция</th><th>Перевод</th>
+            </tr>
+            {% for row in rows %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[-1]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <p><input class = "but" type="button" value="Статистика" onClick='location.href="/stats"'>
+        <input class = "but" type="button" value="Поиск" onClick='location.href="/search"'>
+        <input class="but" type="button" value="Загрузить" onClick='location.href="/"'>
+    </p>
+</div>
+</body>
+</html>
